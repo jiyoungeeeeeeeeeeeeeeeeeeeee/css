@@ -36,7 +36,7 @@ with tab1:
             return False
 
     def main():
-        st.title("이메일 유효성 검사")
+        st.title("구독하기")
 
     # 이메일 입력 받기
         email = st.text_input("이메일 주소를 입력하세요:")
