@@ -27,6 +27,8 @@ with tab1:
     # 이메일 입력
     import streamlit as st
     import re
+    import time
+    
 
     def validate_email(email):
         pattern = r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
@@ -47,6 +49,10 @@ with tab1:
                 st.success("유효한 이메일 주소입니다.")
             else:
                 st.warning("유효하지 않은 이메일 주소입니다.")
+            
+            time.sleep(5)
+            st.empty()
+            
     if __name__ == "__main__":
         main()
 
