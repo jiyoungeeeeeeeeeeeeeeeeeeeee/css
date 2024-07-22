@@ -11,17 +11,17 @@ st.write("안녕하세요! 이곳에 다양한 내용을 추가할 수 있습니
 
 
 # 카테고리 생성
-category = st.selectbox('카테고리 선택', ['기술', '디자인', '마케팅', '기타'])
+category = st.selectbox('카테고리 선택', ['공포', '로맨틱', '미스테리', '고전문학'])
 
 # 선택한 카테고리에 따라 내용 표시
 if category == '공포':
-    st.write('나는 오싹한게 좋아!')
+    st.write('오싹한게 좋아!')
 elif category == '로맨틱':
     st.write('꾸준히 사랑받는 것엔 이유가 있다.')
 elif category == '미스테리':
     st.write('나는 인류가 풀지 못한 난제들이 궁금해.')
 else:
-    st.write('기타 카테고리 내용을 여기에 작성하세요.')
+    st.write('그 당시 사람들의 지혜를 빌려보고 싶어.')
 
 
 
