@@ -25,6 +25,9 @@ with tab1:
     st.write("저희의 제품을 구독하시려면 이메일을 입력해주세요.")
     email = st.text_input("이메일 입력", "example@example.com")
     st.write(f"입력한 이메일: {email}")
+    if email:
+        st.write(f"감사합니다, {email}님!")
+
 
 
 
