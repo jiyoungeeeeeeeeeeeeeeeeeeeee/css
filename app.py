@@ -25,22 +25,35 @@ with tab1:
 
 
     # 이메일 입력
-    st.write("저희의 제품을 구독하시려면 이메일을 입력해주세요.")
-    email = st.text_input("이메일 입력", "example@example.com")
-    st.write(f"입력한 이메일: {email}")
+    import streamlit as st
     import re
+
     def validate_email(email):
         pattern = r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
         if re.match(pattern, email):
             return True
         else:
             return False
-        # 사용 예시
-    user_email = input("이메일 주소를 입력하세요: ")
-    if validate_email(user_email):
-        st.write("유효한 이메일 주소입니다.")
-    else:
-        st.write("유효하지 않은 이메일 주소입니다.")
+
+    def main():
+        st.title("이메일 유효성 검사")
+
+    # 이메일 입력 받기
+        email = st.text_input("이메일 주소를 입력하세요:")
+
+    # 이메일이 입력되었을 때 유효성 검사
+        if email:
+            if validate_email(email):
+                st.success("유효한 이메일 주소입니다.")
+            else:
+                st.warning("유효하지 않은 이메일 주소입니다.")
+    if __name__ == "__main__":
+        main()
+
+
+
+
+    
 
 
 
