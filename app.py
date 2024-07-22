@@ -14,14 +14,30 @@ st.write("안녕하세요! 이곳에 다양한 내용을 추가할 수 있습니
 category = st.selectbox('카테고리 선택', ['기술', '디자인', '마케팅', '기타'])
 
 # 선택한 카테고리에 따라 내용 표시
-if category == '기술':
-    st.write('기술 카테고리 내용을 여기에 작성하세요.')
-elif category == '디자인':
-    st.write('디자인 카테고리 내용을 여기에 작성하세요.')
-elif category == '마케팅':
-    st.write('마케팅 카테고리 내용을 여기에 작성하세요.')
+if category == '공포':
+    st.write('나는 오싹한게 좋아!')
+elif category == '로맨틱':
+    st.write('꾸준히 사랑받는 것엔 이유가 있다.')
+elif category == '미스테리':
+    st.write('나는 인류가 풀지 못한 난제들이 궁금해.')
 else:
     st.write('기타 카테고리 내용을 여기에 작성하세요.')
+
+
+
+
+
+# 탭 생성: 첫 번째 탭의 이름은 "Tab A", 두 번째 탭은 "Tab B"로 표시합니다.
+tab1, tab2 = st.tabs(['Tab A', 'Tab B'])
+
+with tab1:
+    # Tab A를 누르면 표시될 내용
+    st.write('Hello from Tab A!')
+
+with tab2:
+    # Tab B를 누르면 표시될 내용
+    st.write('Hi from Tab B!')
+
 
 
 
