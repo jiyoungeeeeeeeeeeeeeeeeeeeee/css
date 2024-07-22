@@ -10,11 +10,26 @@ st.write("안녕하세요! 이곳에 다양한 내용을 추가할 수 있습니
 
 
 
+# 카테고리 생성
+category = st.selectbox('카테고리 선택', ['기술', '디자인', '마케팅', '기타'])
+
+# 선택한 카테고리에 따라 내용 표시
+if category == '기술':
+    st.write('기술 카테고리 내용을 여기에 작성하세요.')
+elif category == '디자인':
+    st.write('디자인 카테고리 내용을 여기에 작성하세요.')
+elif category == '마케팅':
+    st.write('마케팅 카테고리 내용을 여기에 작성하세요.')
+else:
+    st.write('기타 카테고리 내용을 여기에 작성하세요.')
+
+
+
+
+
 # 시연 동영상 첨부
 video_url = "https://www.example.com/path/to/your/video.mp4"
 st.video(video_url)
-
-
 
 
 
@@ -28,24 +43,3 @@ st.write(f"입력한 이메일: {email}")
 
 
 
-# 댓글을 저장할 리스트 생성
-comments = []
-
-# 댓글 작성 폼
-comment_input = st.text_input("댓글 작성", "")
-
-# 댓글 작성 버튼 클릭 시
-if st.button("댓글 작성"):
-    if comment_input:
-        comments.append(comment_input)
-        st.success("댓글이 작성되었습니다!")
-    else:
-        st.warning("댓글을 입력하세요.")
-
-# 저장된 댓글 표시
-if comments:
-    st.subheader("댓글 목록")
-    for idx, comment in enumerate(comments):
-        st.write(f"{idx + 1}. {comment}")
-else:
-    st.info("아직 댓글이 없습니다.")
