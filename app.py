@@ -21,12 +21,27 @@ with tab1:
     # 시연 동영상 첨부
     video_url = "https://www.example.com/path/to/your/video.mp4"
     st.video(video_url)
+
+
+
     # 이메일 입력
     st.write("저희의 제품을 구독하시려면 이메일을 입력해주세요.")
     email = st.text_input("이메일 입력", "example@example.com")
     st.write(f"입력한 이메일: {email}")
-    if email:
-        st.write(f"감사합니다, {email}님!")
+    import re
+    def validate_email(email):
+        pattern = r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+        if re.match(pattern, email):
+            return True
+        else:
+            return False
+        # 사용 예시
+    user_email = input("이메일 주소를 입력하세요: ")
+    if validate_email(user_email):
+        print("유효한 이메일 주소입니다.")
+    else:
+        print("유효하지 않은 이메일 주소입니다.")
+
 
 
 
