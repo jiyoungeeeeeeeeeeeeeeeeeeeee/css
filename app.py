@@ -50,9 +50,10 @@ with tab1:
             else:
                 st.warning("유효하지 않은 이메일 주소입니다.")
             
-            time.sleep(5)
+             # 5초 후에 메시지 지우기
+            time.sleep(3)
             st.empty()
-            
+
     if __name__ == "__main__":
         main()
 
