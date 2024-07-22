@@ -48,17 +48,17 @@ with tab2:
 
 with tab3:
     # 카테고리 생성
- category = st.selectbox('카테고리 선택', ['공포', '로맨틱', '미스테리', '고전문학'])
+    category = st.selectbox('카테고리 선택', ['공포', '로맨틱', '미스테리', '고전문학'])
 
-# 선택한 카테고리에 따라 내용 표시
-if category == '공포':
-    st.write('오싹한게 좋아!')
-elif category == '로맨틱':
-    st.write('꾸준히 사랑받는 것엔 이유가 있다.')
-elif category == '미스테리':
-    st.write('나는 인류가 풀지 못한 난제들이 궁금해.')
-else:
-    st.write('그 당시 사람들의 지혜를 빌려보고 싶어.')
+    # 선택한 카테고리에 따라 내용 표시
+    if category == '공포':
+        st.write('오싹한게 좋아!')
+    elif category == '로맨틱':
+        st.write('꾸준히 사랑받는 것엔 이유가 있다.')
+    elif category == '미스테리':
+        st.write('나는 인류가 풀지 못한 난제들이 궁금해.')
+    else:
+        st.write('그 당시 사람들의 지혜를 빌려보고 싶어.')
     
 
 
