@@ -10,25 +10,10 @@ st.write("안녕하세요! 이곳에 다양한 내용을 추가할 수 있습니
 
 
 
-# 카테고리 생성
-category = st.selectbox('카테고리 선택', ['공포', '로맨틱', '미스테리', '고전문학'])
-
-# 선택한 카테고리에 따라 내용 표시
-if category == '공포':
-    st.write('오싹한게 좋아!')
-elif category == '로맨틱':
-    st.write('꾸준히 사랑받는 것엔 이유가 있다.')
-elif category == '미스테리':
-    st.write('나는 인류가 풀지 못한 난제들이 궁금해.')
-else:
-    st.write('그 당시 사람들의 지혜를 빌려보고 싶어.')
-
-
-
 
 
 # 탭 생성: 첫 번째 탭의 이름은 "Tab A", 두 번째 탭은 "Tab B"로 표시합니다.
-tab1, tab2 = st.tabs(['Tab A', '소개합니다.'])
+tab1, tab2, tab3 = st.tabs(['Tab A', '소개합니다.','use'])
 
 with tab1:
     # Tab A를 누르면 표시될 내용
@@ -43,7 +28,29 @@ with tab1:
 with tab2:
     # Tab B를 누르면 표시될 내용
     st.write('동화책 창작에 도움을 주는 것에 대하여')
+    long_markdown = """
+# 제목
+여기에 긴 장문의 텍스트를 마크다운으로 작성하세요.
 
+- 리스트 항목 1
+- 리스트 항목 2
+"""
+st.markdown(long_markdown)
+
+with tab3:
+    # 카테고리 생성
+ category = st.selectbox('카테고리 선택', ['공포', '로맨틱', '미스테리', '고전문학'])
+
+# 선택한 카테고리에 따라 내용 표시
+if category == '공포':
+    st.write('오싹한게 좋아!')
+elif category == '로맨틱':
+    st.write('꾸준히 사랑받는 것엔 이유가 있다.')
+elif category == '미스테리':
+    st.write('나는 인류가 풀지 못한 난제들이 궁금해.')
+else:
+    st.write('그 당시 사람들의 지혜를 빌려보고 싶어.')
+    
 
 
 
