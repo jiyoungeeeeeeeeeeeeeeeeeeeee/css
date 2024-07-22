@@ -63,6 +63,12 @@ st.write(f"입력한 이메일: {email}")
 # 게시글의 좋아요 수 (임의로 초기값 설정)
 likes_count = 10
 
+
+
+# 하트 이모티콘을 포함한 버튼
+st.markdown('<button class="heart-button">❤️ Like</button>', unsafe_allow_html=True)
+
+
 # 좋아요 버튼
 if st.button("좋아요"):
     likes_count += 1
