@@ -65,7 +65,7 @@ likes_count = 10
 
 
 # 좋아요 버튼
-if st.markdown('<button class="heart-button">❤️ Like</button>', unsafe_allow_html=True):
+if st.button(st.markdown('<button class="heart-button">❤️ Like</button>', unsafe_allow_html=True)):
     likes_count += 1
     st.write(f"게시글이 좋아요! 현재 좋아요 수: {likes_count}")
 else:
