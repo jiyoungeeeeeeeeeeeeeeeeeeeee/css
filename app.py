@@ -21,6 +21,11 @@ with tab1:
     # 시연 동영상 첨부
     video_url = "https://www.example.com/path/to/your/video.mp4"
     st.video(video_url)
+    # 이메일 입력
+    st.write("저희의 제품을 구독하시려면 이메일을 입력해주세요.")
+    email = st.text_input("이메일 입력", "example@example.com")
+    st.write(f"입력한 이메일: {email}")
+
 
 
 
@@ -55,23 +60,6 @@ elif category == '미스테리':
 else:
     st.write('그 당시 사람들의 지혜를 빌려보고 싶어.')
     
-
-
-
-
-
-
-
-
-
-
-# 이메일 입력
-st.write("저희의 제품을 구독하시려면 이메일을 입력해주세요.")
-email = st.text_input("이메일 입력", "example@example.com")
-st.write(f"입력한 이메일: {email}")
-
-
-
 
 
 
