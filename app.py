@@ -29,13 +29,16 @@ with tab2:
     # Tab B를 누르면 표시될 내용
     st.write('동화책 창작에 도움을 주는 것에 대하여')
     long_markdown = """
-# 제목
-여기에 긴 장문의 텍스트를 마크다운으로 작성하세요.
+ # 제목
+ 여기에 긴 장문의 텍스트를 마크다운으로 작성하세요.
+ 
+ - 리스트 항목 1
+ - 리스트 항목 2
+ """
+ st.markdown(long_markdown)
 
-- 리스트 항목 1
-- 리스트 항목 2
-"""
-st.markdown(long_markdown)
+
+
 
 with tab3:
     # 카테고리 생성
