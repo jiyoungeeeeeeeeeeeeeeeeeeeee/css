@@ -64,13 +64,8 @@ st.write(f"입력한 이메일: {email}")
 likes_count = 10
 
 
-
-# 하트 이모티콘을 포함한 버튼
-st.markdown('<button class="heart-button">❤️ Like</button>', unsafe_allow_html=True)
-
-
 # 좋아요 버튼
-if st.button("좋아요"):
+if st.markdown('<button class="heart-button">❤️ Like</button>', unsafe_allow_html=True):
     likes_count += 1
     st.write(f"게시글이 좋아요! 현재 좋아요 수: {likes_count}")
 else:
