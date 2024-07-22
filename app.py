@@ -65,15 +65,15 @@ likes_count = 10
 
 
 # 좋아요 버튼
-#if st.button('좋아요'):
- #   st.write('❤️ 이 글을 좋아합니다!')
-  #  likes_count += 1
-   # st.write(f"게시글이 좋아요! 현재 좋아요 수: {likes_count}")
-#else:
-#    st.write(f"게시글 좋아요 수: {likes_count}")
-
-def handle_like():
+if st.button('좋아요'):
     st.write('❤️ 이 글을 좋아합니다!')
+    likes_count += 1
+    st.write(f"게시글이 좋아요! 현재 좋아요 수: {likes_count}")
+else:
+    st.write(f"게시글 좋아요 수: {likes_count}")
 
-like_button = st.button('좋아요')
-like_button.on_click(handle_like)
+#def handle_like():
+#    st.write('❤️ 이 글을 좋아합니다!')
+
+#like_button = st.button('좋아요')
+#like_button.on_click(handle_like)
