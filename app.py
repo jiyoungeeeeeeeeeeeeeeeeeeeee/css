@@ -72,8 +72,20 @@ likes_count = 10
 #else:
 #    st.write(f"게시글 좋아요 수: {likes_count}")
 
-def handle_like():
-    st.write('❤️ 이 글을 좋아합니다!')
 
-like_button = st.button('좋아요')
-like_button.on_click(handle_like)
+
+
+# 좋아요 버튼 클릭 여부를 세션 상태로 관리
+if 'like_button' not in st.session_state:
+    st.session_state.like_button = False
+
+def handle_like():
+    st.session_state.like_button = not st.session_state.like_button
+    if st.session_state.like_button:
+        st.write('❤️ 이 글을 좋아합니다!')
+    else:
+        st.write('❤️ 좋아요 취소')
+
+# 좋아요 버튼 생성
+if st.button('좋아요'):
+    handle_like()
